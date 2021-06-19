@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/athlete', 'AthleteController@create');
+Route::get('/athlete/:id', 'AthleteController@index');
+Route::get('/athlete', 'AthleteController@show');
+Route::delete('/athlete/:id', 'AthleteController@delete');
