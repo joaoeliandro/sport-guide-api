@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/athlete', 'App\Http\Controllers\AthleteController@index');
+Route::get('/athlete/{id}', 'App\Http\Controllers\AthleteController@show');
+Route::post('/athlete', 'App\Http\Controllers\AthleteController@create');
+Route::put('/athlete/{id}', 'App\Http\Controllers\AthleteController@update');
+Route::delete('/athlete/{id}', 'App\Http\Controllers\AthleteController@delete');

@@ -12,8 +12,3 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::post('/athlete', 'AthleteController@create');
-Route::get('/athlete/:id', 'AthleteController@index');
-Route::get('/athlete', 'AthleteController@show');
-Route::delete('/athlete/:id', 'AthleteController@delete');
